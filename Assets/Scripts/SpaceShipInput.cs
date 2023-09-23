@@ -12,6 +12,7 @@ public class SpaceShipInput : MonoBehaviour
     internal float pitch;
     internal float yaw;
     internal float roll;
+    internal bool boost;
     
     // Start is called before the first frame update
     void Start()
@@ -26,5 +27,6 @@ public class SpaceShipInput : MonoBehaviour
         pitch = Input.GetAxis("SpaceShipPitch");
         yaw = Input.GetAxis("SpaceShipYaw");
         roll = Input.GetAxis("SpaceShipRoll");
+        boost = Input.GetKey("space");
     }
 }

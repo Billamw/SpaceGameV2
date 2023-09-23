@@ -955,6 +955,14 @@ PrefabInstance:
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 7002001785447762666, guid: b3c2f600956a13548affdec8d6327b08, type: 3}
+      propertyPath: rollMultiplicator
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002001785447762666, guid: b3c2f600956a13548affdec8d6327b08, type: 3}
+      propertyPath: pitchMultiplicator
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002001785447762666, guid: b3c2f600956a13548affdec8d6327b08, type: 3}
       propertyPath: speedMultiplicator
       value: 10
       objectReference: {fileID: 0}

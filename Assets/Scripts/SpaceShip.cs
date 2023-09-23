@@ -12,7 +12,10 @@ public class SpaceShip : MonoBehaviour
 
     [SerializeField] internal int health  = 100;
     [SerializeField] internal float speedMultiplicator  = 1;
-    [SerializeField] internal float yawMultiplicator  = 1;
+    [SerializeField] internal float   yawMultiplicator  = 1;
+    [SerializeField] internal float  rollMultiplicator  = 1;
+    [SerializeField] internal float pitchMultiplicator  = 1;
+    [SerializeField] internal float boostMultiplicator  = 10;
 
     [SerializeField] internal GameObject spaceShip;
     
