@@ -8,8 +8,10 @@ public class SpaceShipInput : MonoBehaviour
     
     [SerializeField] internal SpaceShip spaceShip;
 
-    internal float movementZ;
-    internal float movementX;
+    internal float throttle;
+    internal float pitch;
+    internal float yaw;
+    internal float roll;
     
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,9 @@ public class SpaceShipInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movementZ = Input.GetAxis("Horizontal");
-        movementX = Input.GetAxis("Vertical");
+        throttle = Input.GetAxis("SpaceShipThrottle");
+        pitch = Input.GetAxis("SpaceShipPitch");
+        yaw = Input.GetAxis("SpaceShipYaw");
+        roll = Input.GetAxis("SpaceShipRoll");
     }
 }

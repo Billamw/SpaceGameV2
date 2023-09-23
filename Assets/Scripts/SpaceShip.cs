@@ -11,8 +11,8 @@ public class SpaceShip : MonoBehaviour
     //internal spaceship properties:
 
     [SerializeField] internal int health  = 100;
-    [SerializeField] internal float speed  = 1;
-    internal float momentum = 0;
+    [SerializeField] internal float speedMultiplicator  = 1;
+    [SerializeField] internal float yawMultiplicator  = 1;
 
     [SerializeField] internal GameObject spaceShip;
     

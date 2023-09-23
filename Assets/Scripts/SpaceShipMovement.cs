@@ -5,34 +5,38 @@ using UnityEngine;
 public class SpaceShipMovement : MonoBehaviour
 {
     [SerializeField] internal SpaceShip spaceShip;
+
+    private Transform spaceShipT;
     
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("SpaceShipMovement initialized");
+        spaceShipT = spaceShip.spaceShip.transform;
     }
+    
+    //Movement Functionality:
+    // -Throttle, Brake -> T: Shift, B: Ctrl
+    // -Yaw             -> Left Rudder: Q, Right Rudder: E
+    // -Pitch           -> Nose Up: S, Nose Down: W
+    // -Roll            -> Left: A, Right: D
+    
+    //Aplly all transformations to local coordinates!
 
     // Update is called once per frame
     void Update()
     {
-        MoveSpaceship();
-        RollSpaceShip();
+        Throttle();
+        Yaw();
     }
 
-    private void MoveSpaceship()
+    private void Throttle()
     {
-        Debug.Log("MovementScript: Moving");
-        spaceShip.spaceShip.transform.position =
-            spaceShip.spaceShip.transform.position + Vector3.back * spaceShip.speed * Time.deltaTime * spaceShip.inputScript.movementX
-                                                   + Vector3.left * spaceShip.speed * Time.deltaTime * spaceShip.inputScript.movementZ;
+        spaceShipT.Translate(0, 0, -spaceShip.inputScript.throttle * Time.deltaTime * spaceShip.speedMultiplicator);
     }
 
-    private void RollSpaceShip()
+    private void Yaw()
     {
-        spaceShip.spaceShip.transform.localRotation = Quaternion.Euler(0, spaceShip.inputScript.movementZ*10,0 );
-        // spaceShip.spaceShip.transform.eulerAngles = new Vector3(
-        //     0,
-        //     spaceShip.spaceShip.transform.rotation.y,
-        //     10 * spaceShip.inputScript.movementZ);
+        spaceShipT.Rotate(Vector3.up, spaceShip.inputScript.yaw * spaceShip.yawMultiplicator);
     }
 }
