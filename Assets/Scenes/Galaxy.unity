@@ -773,9 +773,10 @@ MonoBehaviour:
   movementScript: {fileID: 7866836182671139909}
   health: 100
   speedMultiplicator: 10
-  yawMultiplicator: 0.05
-  rollMultiplicator: 0.1
-  pitchMultiplicator: 0.2
+  yawMultiplicator: 0.4
+  rollMultiplicator: 0.4
+  pitchMultiplicator: 0.5
+  boostMultiplicator: 10
   spaceShip: {fileID: 7378951724288835326}
 --- !u!114 &7866836182671139912
 MonoBehaviour:
