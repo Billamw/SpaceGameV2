@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class Primitiv_Test : MonoBehaviour
 {
-    public GameObject gameObject;
     // Start is called before the first frame update
     void Start()
     {
-        Mesh mesh = gameObject.GetComponent<MeshFilter>().mesh;
-        for (int i = 0; i < 50; i++)
+        Mesh mesh = GetComponentInChildren<MeshFilter>().mesh;
+        Vector3[] vertices = mesh.vertices;
+        
+        print(vertices.Length);
+        
+        int p = 0;
+        while (p < 100)
         {
-            mesh.vertices[i] = mesh.vertices[i] * 4;
+            vertices[p] += new Vector3(0, Random.Range(-0.004f, 0.004f), 0);
+            p++;
         }
+        
+        mesh.vertices = vertices;
+        mesh.RecalculateNormals();
+        mesh.RecalculateBounds();
+        mesh.RecalculateTangents();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
