@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Random = UnityEngine.Random;
 
 public class solarSystem : MonoBehaviour
 {
@@ -26,17 +28,28 @@ public class solarSystem : MonoBehaviour
     //     }
     // }
 
+    public Vector3 startPosition;
+
     public int size = 4;
 
     public GameObject sunObject;
 
     public GameObject planetObject;
     //generate solar system, therefor a sun and some planets and animate them in a local coordinate system
+
+    private void Awake()
+    {
+        startPosition = this.transform.position;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        float x = startPosition.x;
+        float y = startPosition.y;
+        float z = startPosition.z;
         //Fill needed variables for generating:
-        _sunPosition = new Vector3(Random.Range(0, 10000), Random.Range(0, 10000), Random.Range(0, 10000));
+        _sunPosition = new Vector3(Random.Range(x, x+10000), Random.Range(y, y+10000), Random.Range(z, z+10000));
         _sunRotation = Quaternion.Euler(Random.Range(0, 270), 0, Random.Range(0, 270));
         
         orbitDistance = new float[size];
@@ -58,7 +71,6 @@ public class solarSystem : MonoBehaviour
         foreach (var planet in _planetList)
         {
             planet.transform.RotateAround(sun.transform.position, sun.transform.up, Time.deltaTime*speed[i]*0.1f);
-            Debug.Log(sun.transform.up);
             i++;
         }
     }
@@ -86,9 +98,10 @@ public class solarSystem : MonoBehaviour
 
         for (int i = 0; i < size; i++)
         {
-            GameObject planet = Instantiate(planetObject, new Vector3(orbitDistance[i] * 1000, 0, 0), Quaternion.Euler(0, 0, 0));
-            planet.transform.Translate(planet.transform.position, sun.transform);
-            // planet.transform.position += _sunPosition;
+            GameObject planet = Instantiate(planetObject, _sunPosition, _sunRotation);
+            //Vector3 tmp = Vector3.Project(planet.transform.position, sun.transform.right);
+            planet.transform.Translate(orbitDistance[i] * 1000, 0, 0);
+            //planet.transform.Translate(planet.transform.position, sun.transform);
             Debug.Log("Planet " + (i+1) + " instantiated at: " + planet.transform.position);
             _planetList.Add(planet);
             

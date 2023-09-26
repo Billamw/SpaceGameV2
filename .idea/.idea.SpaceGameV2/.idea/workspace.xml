@@ -15,6 +15,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerateSolarSystem/Sun.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerateSolarSystem/galaxy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerateSolarSystem/solarSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerateSolarSystem/spawnSystems.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -101,6 +102,7 @@
       <workItem from="1695562412982" duration="2399000" />
       <workItem from="1695654696626" duration="6089000" />
       <workItem from="1695717915702" duration="3544000" />
+      <workItem from="1695732663008" duration="5813000" />
     </task>
     <servers />
   </component>

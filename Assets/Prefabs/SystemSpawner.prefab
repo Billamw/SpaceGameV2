@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2309057014669560722
+--- !u!1 &6472645639251569165
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2309057014669560720}
-  - component: {fileID: 2309057014669560723}
+  - component: {fileID: 6472645639251569171}
+  - component: {fileID: 6472645639251569170}
   m_Layer: 0
-  m_Name: PlanetSpawner
+  m_Name: SystemSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2309057014669560720
+--- !u!4 &6472645639251569171
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2309057014669560722}
+  m_GameObject: {fileID: 6472645639251569165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 446.14413, y: 58.932194, z: -40.366882}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2309057014669560723
+--- !u!114 &6472645639251569170
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2309057014669560722}
+  m_GameObject: {fileID: 6472645639251569165}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb39c2c1f1cfa4408be4660efbf3fb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 7668c77a523248444a42aab73878fc19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSystem: {fileID: 0}
-  sun: {fileID: 9184738190853718877, guid: 16405638e116fc94ca1ec779903aa02b, type: 3}
-  planet: {fileID: 7027304830533368576, guid: 872723b307564b9428413accc9492170, type: 3}
+  startPosition: {x: 0, y: 0, z: 0}
+  size: 4
+  sunObject: {fileID: 9184738190853718877, guid: 16405638e116fc94ca1ec779903aa02b, type: 3}
+  planetObject: {fileID: 7027304830533368576, guid: 872723b307564b9428413accc9492170, type: 3}
