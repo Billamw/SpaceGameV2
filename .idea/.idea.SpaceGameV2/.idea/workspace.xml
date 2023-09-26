@@ -15,6 +15,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerateSolarSystem/Sun.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerateSolarSystem/solarSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenerateSolarSystem/spawnSystems.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -98,6 +99,8 @@
       <workItem from="1695496670267" duration="1075000" />
       <workItem from="1695543337975" duration="2174000" />
       <workItem from="1695562412982" duration="2399000" />
+      <workItem from="1695654696626" duration="6089000" />
+      <workItem from="1695717915702" duration="3544000" />
     </task>
     <servers />
   </component>
@@ -108,17 +111,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/GenerateSolarSystem/Sun.cs</url>
-          <line>45</line>
-          <properties documentPath="C:\Users\tilman\Documents\GitHub\SpaceGameV2\Assets\Scripts\GenerateSolarSystem\Sun.cs" initialLine="34" containingFunctionPresentation="Method 'spawnPlanets'" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

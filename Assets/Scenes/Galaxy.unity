@@ -229,7 +229,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pitch: \nRoll: \nYaw:\nThrottle:"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -441,7 +441,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1507430064}
-  - component: {fileID: 1507430063}
+  - component: {fileID: 1507430065}
   m_Layer: 0
   m_Name: SystemSpawner
   m_TagString: Untagged
@@ -449,19 +449,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1507430063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507430062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48d7ed4eaa0ac204681b6bc8fd310710, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  system: {fileID: 2309057014669560722, guid: 603d7131cfc68c5438c363bcd9ac281a, type: 3}
 --- !u!4 &1507430064
 Transform:
   m_ObjectHideFlags: 0
@@ -470,13 +457,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507430062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 286.8207, y: 307.0606, z: -431.82816}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1507430065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507430062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7668c77a523248444a42aab73878fc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 4
+  sunObject: {fileID: 9184738190853718877, guid: 16405638e116fc94ca1ec779903aa02b, type: 3}
+  planetObject: {fileID: 7027304830533368576, guid: 872723b307564b9428413accc9492170, type: 3}
 --- !u!1 &7378951724288835326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1816343027169701867, guid: 60b3deac8506c7c418780b0590d137d9, type: 3}

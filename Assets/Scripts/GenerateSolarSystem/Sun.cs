@@ -1,21 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Sun : MonoBehaviour
 {
-    public GameObject sphere;
+    public static Sun instance;
+    public GameObject sun;
     public GameObject planet;
-    public Vector3 sunPosition;
+    public static Vector3 sunPosition;
+    public static Quaternion sunRotation;
     private List<GameObject> planetList = new();
 
-    private float[] orbitArray = new float[7];
-    private float[] speed = new float[7];
-    
+    private float[] orbitArray = new float[4];
+    private float[] speed = new float[4];
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(sphere, this.transform.position, Quaternion.Euler(0, 0, 0));
+        Instantiate(sun, sunPosition, sunRotation);
         GenerateOrbit();
         SpawnPlanets();
     }
@@ -23,19 +32,19 @@ public class Sun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int i = 0;
-        foreach (var obj in planetList)
-        {
-            obj.transform.RotateAround(this.transform.position, Vector3.up, Time.deltaTime * speed[i] * 100);
-            i++;
-        }
+        // int i = 0;
+        // foreach (var obj in planetList)
+        // {
+        //     obj.transform.RotateAround(this.transform.position, Vector3.up, Time.deltaTime * speed[i]);
+        //     i++;
+        // }
     }
 
     private void GenerateOrbit()
     {
         for (int i = 0; i < orbitArray.Length; i++)
         {
-            orbitArray[i] = (float)i + Random.Range(0f, 1f);
+            orbitArray[i] = (float)i + Random.Range(1f, 5f);
             speed[i] = Random.Range(0.1f, 2f);
         }
     }
@@ -44,9 +53,9 @@ public class Sun : MonoBehaviour
     {
         for (int i = 0; i < orbitArray.Length; i++)
         {
-            planetList.Add(Instantiate(planet, sphere.transform.position + new Vector3(orbitArray[i] * 100f, 0, 0),
-                Quaternion.Euler(0, 0, 0)));
-            Debug.Log(sphere.transform.position + new Vector3(orbitArray[i] * 100f, 0, 0));
+            planetList.Add(Instantiate(planet, sunPosition + new Vector3(orbitArray[i] * 1000f, 0, 0),
+                sunRotation));
+            Debug.Log("planetPOs: " + sunPosition + new Vector3(orbitArray[i] * 1000f, 0, 0));
         }
     }
 }

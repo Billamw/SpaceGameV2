@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb39c2c1f1cfa4408be4660efbf3fb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphere: {fileID: 9184738190853718877, guid: 16405638e116fc94ca1ec779903aa02b, type: 3}
+  spawnSystem: {fileID: 0}
+  sun: {fileID: 9184738190853718877, guid: 16405638e116fc94ca1ec779903aa02b, type: 3}
   planet: {fileID: 7027304830533368576, guid: 872723b307564b9428413accc9492170, type: 3}
-  sunPosition: {x: 0, y: 0, z: 0}
